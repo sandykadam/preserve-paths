@@ -18,7 +18,7 @@
   },
   "require-dev": {
     "composer/composer": "^2.0",
-    "phpunit/phpunit": "^8.5.9",
+    "phpunit/phpunit": "^9.5",
     "derhasi/tempdirectory": "0.1.*",
     "squizlabs/php_codesniffer": "2.*",
     "escapestudios/symfony2-coding-standard": "2.*"
