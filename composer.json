@@ -1,5 +1,5 @@
 {
-  "name": "drupal-composer/preserve-paths",
+  "name": "sandykadam/preserve-paths",
   "description": "Composer plugin for preserving custom paths and supporting nested packages",
   "type": "composer-plugin",
   "keywords": [
@@ -8,17 +8,10 @@
     "custom path",
     "nested package"
   ],
-  "homepage": "https://github.com/drupal-composer/preserve-paths",
+  "homepage": "https://github.com/sandykadam/preserve-paths",
   "license": "GPL-2.0-or-later",
-  "authors": [
-    {
-      "name": "Johannes Haseitl",
-      "email": "johannes@undpaul.de",
-      "homepage": "http://www.undpaul.de"
-    }
-  ],
   "support": {
-    "issues": "https://github.com/drupal-composer/preserve-paths/issues"
+    "issues": "https://github.com/sandykadam/preserve-paths/issues"
   },
   "require": {
     "composer-plugin-api": "^1.0 || ^2.0"
