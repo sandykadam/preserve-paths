@@ -28,7 +28,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
     /**
      * {@inheritdoc}
      */
-    public function activate(Composer $composer, IOInterface $io)
+    public function activate(Composer $composer, IOInterface $io): void
     {
         $this->wrapper = new PluginWrapper($composer, $io);
     }
@@ -36,7 +36,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
     /**
      * {@inheritdoc}
      */
-    public static function getSubscribedEvents()
+    public static function getSubscribedEvents(): array
     {
         return array(
             PackageEvents::PRE_PACKAGE_INSTALL => 'prePackage',
