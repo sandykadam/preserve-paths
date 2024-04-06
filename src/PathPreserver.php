@@ -122,7 +122,8 @@ class PathPreserver
      */
     public function rollback()
     {
-        if (empty($this->backups)) {
+        $backups = $this->backups ?? [];
+        if (empty($backups)) {
             return;
         }
 
@@ -174,7 +175,7 @@ class PathPreserver
      *
      * @see file_exists()
      */
-    public static function fileExists($path)
+    public static function fileExists(string $path): bool
     {
 
       // Get all parent directories.
@@ -231,7 +232,7 @@ class PathPreserver
             if (!is_writable($path)) {
                 $this->makePathWritable($path);
             }
-
+        
             $parent = dirname($path);
             if (!is_writable($parent)) {
                 $this->makePathWritable($parent);
