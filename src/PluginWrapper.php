@@ -101,7 +101,7 @@ class PluginWrapper
      * @return \Composer\Package\PackageInterface[]
      * @throws \Exception
      */
-    protected function getPackagesFromEvent(PackageEvent $event)
+    public function getPackagesFromEvent(PackageEvent $event): array
     {
 
         $operation = $event->getOperation();
@@ -126,7 +126,7 @@ class PluginWrapper
      *
      * @return string[]
      */
-    protected function getInstallPathsFromPackages(array $packages)
+    protected function getInstallPathsFromPackages(array $packages): array
     {
         /** @var \Composer\Installer\InstallationManager $installationManager */
         $installationManager = $this->composer->getInstallationManager();
@@ -165,6 +165,7 @@ class PluginWrapper
     protected function getPreservePaths()
     {
         $extra = $this->composer->getPackage()->getExtra();
+        $paths = $extra['preserve-paths'] ?? [];
 
         if (!isset($extra['preserve-paths'])) {
             $paths = array();
